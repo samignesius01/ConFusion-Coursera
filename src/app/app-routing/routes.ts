@@ -18,6 +18,10 @@ export const routes: Routes=[
         component:MenuComponent
     },
     {
+        path:'dishdetail/:id',
+        component:DishdetailComponent
+    },
+    {
          path:'',
          redirectTo:'/home',
          pathMatch:'full'
