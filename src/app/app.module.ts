@@ -21,7 +21,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-
+import { PromotionService} from './services/promotion.service';
 import { DishService } from './services/dish.service';
 
 
@@ -48,7 +48,8 @@ import { DishService } from './services/dish.service';
     MatButtonModule
   ],
   providers: [
-    DishService
+    DishService,
+    PromotionService
   ],
   bootstrap: [AppComponent]
 })
