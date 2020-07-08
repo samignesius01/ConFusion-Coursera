@@ -29,5 +29,9 @@ export const routes: Routes=[
     {
         path:'contactus',
         component:ContactComponent
+    },
+    {
+       path:'about',
+       component:AboutComponent
     }
 ];
