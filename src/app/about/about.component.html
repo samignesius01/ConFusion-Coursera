@@ -60,7 +60,7 @@
     <mat-list fxFlex>
       <mat-list-item *ngFor="let leader of lead">
         <img matListAvatar src="{{leader.image}}" alt="{{leader.name}}">
-          <h3 matLine>{{leader.name}}</h3>
+          <h3 matLine>{{leader.name}} {{leader.abbr}}</h3>
           <p matLine>{{leader.designation}} Stars</p>
           <p matLine>{{leader.description}}</p>
       </mat-list-item>

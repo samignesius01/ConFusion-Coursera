@@ -37,11 +37,12 @@
   <mat-card-header>
     <div mat-card-avatar></div>
     <mat-card-title>
-      <h3>{{lead.name | uppercase}}</h3>
+      <h3>{{lead.name | uppercase}} {{lead.abbr}}</h3>
     </mat-card-title>
   </mat-card-header>
   <img mat-card-image src={{lead.image}} alt={{lead.name}}>
   <mat-card-content>
+    <h3>Executive Cheif</h3>
     <p>{{lead.description}}
     </p>
   </mat-card-content>
