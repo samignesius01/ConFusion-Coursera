@@ -18,7 +18,9 @@ import { AppComponent } from './app.component';
 import 'hammerjs';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
-
+import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { MenuComponent } from './menu/menu.component';
 import { HeaderComponent } from './header/header.component';
@@ -33,6 +35,8 @@ import { LoginComponent } from './login/login.component';
 
 import { MatDialogModule  } from '@angular/material/dialog';
 import { from } from 'rxjs';
+
+
 
 @NgModule({
   declarations: [
@@ -60,7 +64,10 @@ import { from } from 'rxjs';
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSelectModule,
+    MatSlideToggleModule,
+    ReactiveFormsModule
   ],
   providers: [
     DishService,
