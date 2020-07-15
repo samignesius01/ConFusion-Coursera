@@ -9,16 +9,16 @@ export class LeaderService {
 
   constructor() { }
 
-  getLeaders():Leader[]
+  getLeaders():Promise<Leader[]>
   {
-    return LEADER;
+    return Promise.resolve(LEADER);
   }
 
-  getLeader(id:string):Leader{
-    return LEADER.filter((leader) =>(leader.id===id))[0];
+  getLeader(id:string):Promise<Leader>{
+    return Promise.resolve(LEADER.filter((leader) =>(leader.id===id))[0]);
   }
 
-  getFeaturedLeader():Leader{
-    return LEADER.filter((leader)=>leader.featured)[0]; 
+  getFeaturedLeader():Promise<Leader>{
+    return Promise.resolve(LEADER.filter((leader)=>leader.featured)[0]); 
   }
 }

@@ -20,7 +20,8 @@ export class AboutComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.lead=this.leaderService.getLeaders();
+    this.leaderService.getLeaders()
+      .then(leaders => this.lead=leaders);
   }
 
 }
