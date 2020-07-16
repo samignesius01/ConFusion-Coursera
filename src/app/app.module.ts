@@ -6,6 +6,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from  '@angular/material/input';
@@ -38,6 +40,7 @@ import { from } from 'rxjs';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,7 +70,8 @@ import { from } from 'rxjs';
     MatCheckboxModule,
     MatSelectModule,
     MatSlideToggleModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatProgressSpinnerModule
   ],
   providers: [
     DishService,
