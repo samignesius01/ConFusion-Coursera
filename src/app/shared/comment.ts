@@ -3,4 +3,6 @@ export class Comment {
     comment:string;
     author:string;
     date:string;
-}
+};
+
+export const CommentType=['rating','comment','author','date'];

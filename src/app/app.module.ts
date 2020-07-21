@@ -37,6 +37,7 @@ import { LoginComponent } from './login/login.component';
 
 import { MatDialogModule  } from '@angular/material/dialog';
 import { from } from 'rxjs';
+import {MatSliderModule} from '@angular/material/slider';
 
 
 
@@ -71,7 +72,8 @@ import { from } from 'rxjs';
     MatSelectModule,
     MatSlideToggleModule,
     ReactiveFormsModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatSliderModule
   ],
   providers: [
     DishService,
