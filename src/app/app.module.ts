@@ -39,6 +39,9 @@ import { MatDialogModule  } from '@angular/material/dialog';
 import { from } from 'rxjs';
 import {MatSliderModule} from '@angular/material/slider';
 
+import {HttpClientModule} from '@angular/common/http';
+import {baseURL} from './shared/baseurl';
+
 
 
 
@@ -73,12 +76,14 @@ import {MatSliderModule} from '@angular/material/slider';
     MatSlideToggleModule,
     ReactiveFormsModule,
     MatProgressSpinnerModule,
-    MatSliderModule
+    MatSliderModule,
+    HttpClientModule
   ],
   providers: [
     DishService,
     PromotionService,
-    LeaderService
+    LeaderService,
+    {provide:'BaseURL',useValue:baseURL}
     
   ],
   entryComponents:[
