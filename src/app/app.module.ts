@@ -42,6 +42,8 @@ import {MatSliderModule} from '@angular/material/slider';
 import {HttpClientModule} from '@angular/common/http';
 import {baseURL} from './shared/baseurl';
 
+import {ProcessHTTPMsgService} from './services/process-httpmsg.service';
+
 
 
 
@@ -63,6 +65,7 @@ import {baseURL} from './shared/baseurl';
     BrowserAnimationsModule,
     MatToolbarModule,
     FlexLayoutModule,
+    HttpClientModule,
     FormsModule,
     MatListModule,
     MatGridListModule,
@@ -76,13 +79,14 @@ import {baseURL} from './shared/baseurl';
     MatSlideToggleModule,
     ReactiveFormsModule,
     MatProgressSpinnerModule,
-    MatSliderModule,
-    HttpClientModule
+    MatSliderModule
+   
   ],
   providers: [
     DishService,
     PromotionService,
     LeaderService,
+    ProcessHTTPMsgService,
     {provide:'BaseURL',useValue:baseURL}
     
   ],

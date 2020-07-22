@@ -84,11 +84,7 @@
                     <span> {{ dish.comments[4].date | date}}</span>
                 </span>
                 
-              <p>{{commentForm.value.authorname}}</p>
-              
-              <p>{{commentForm.value.rating}} stars</p>
-              
-              <p>{{commentForm.value.authorcomment}}</p>
+             
             
             </mat-list>
           </mat-card-content>
@@ -98,7 +94,7 @@
 
      <!--Comment Form-->
 
-     <div fxFlex fxFlexOffset="60px" class="form-size">
+     <div fxFlex fxFlexOffset="60px" class="form-size" >
 
        
       <form novalidate [formGroup]="commentForm" #fform="ngForm" (ngSubmit)="onSubmit()">
@@ -118,13 +114,23 @@
         </p>
         <button type="submit" mat-button class="background-primary text-floral-white" [disabled]="commentForm.invalid">Submit</button>
       </form>
+
+      <p>{{comment.authorname}}</p>
+              
+      <p>{{comment.rating}} stars</p>
+      
+      <p>{{comment.authorcomment}}</p>
     </div>
     
      <!--Comment Form-->
   </div>
 
-  <div fxFlex [hidden]="dish">
+  <div fxFlex [hidden]="dish || errMess">
     <mat-spinner></mat-spinner><h4>Loading...  Please Wait</h4>
+  </div>
+  <div fxFlex *ngIf="errMess">
+     <h2>Error</h2>
+     <h4>{{errMess}}</h4>
   </div>
 
 </div>
